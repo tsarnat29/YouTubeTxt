@@ -1,0 +1,209 @@
+.basic-element {
+	width: 250px;
+	height: 60px;
+	padding-left: 15px;
+
+	/* Відносно позиціонуємо елемент */
+	/* вказуємо відступ зліва */
+	position: relative;
+	left: 15px;
+
+	/* Декоруємо елемент, описуючи зелену лінію зліва */
+	border-left: 1px solid green;
+}
+
+.rtl-element {
+	/* справа наліво */
+	direction: rtl;
+	width: 250px;
+	height: 60px;
+	padding-left: 15px;
+
+	/* Відносно позиціонуємо елемент */
+	/* вказуємо зсув з лівої сторони елементу */
+	position: relative;
+	left: 15px;
+
+	/* Декоруємо елемент, описуючи зелену лінію справа */
+	border-left: 1px solid green;
+}
+
+.vertical-element {
+	writing-mode: vertical-lr;
+	width: 250px;
+	height: 60px;
+	padding-left: 15px;
+
+	/* Відносно позиціонуємо елемент */
+	/* вказуємо зсув з лівої сторони елементу */
+	position: relative;
+	left: 15px;
+
+	/* Декоруємо елемент, описуючи зелену лінію справа */
+	border-left: 1px solid green;
+}
+
+/* ------------- */
+
+.rtl-element {
+	/* справа наліво */
+	direction: rtl;
+	/* width: 250px; */
+
+	/* Вказуємо розмір по рядку */
+	/* (сторона, по якій рухається текст) */
+	inline-size: 250px;
+
+	/* height: 60px; */
+	/* Вказуємо розмір по блоку */
+	/* (сторона, яка перпендикулярна руху тексту */
+	block-size: 60px;
+
+
+	/* padding-left: 15px; */
+	/* Вказуємо відступ на початку руху тексту */
+
+	padding-inline-start: 15px;
+
+
+	/* Відносно позиціонуємо елемент */
+	/* вказуємо зсув від верхньої та лівої сторони елементу */
+	/* position: relative;
+	left: 15px; */
+	/* Замість left: 15px; вказуємо зсув на початку руху тексту */
+	inset-inline-start: 15px;
+
+	/* Декоруємо елемент, описуючи зелену лінію справа */
+	/* border-left: 1px solid green; */
+	/* Декоруємо елемент описуючи зелену лінію на початку руху тексту */
+	border-inline-start: 1px solid green;
+}
+
+.vertical-element {
+	writing-mode: vertical-lr;
+	/* width: 250px;
+	height: 60px;
+	padding-left: 15px; */
+	/* Вказуємо розмір по рядку */
+	/* (сторони, по якій рухається текст) */
+	inline-size: 250px;
+
+	/* Вказуємо розмір по блоку */
+	/* (сторони, яка перпендикулярна руху тексту) */
+	block-size: 60px;
+
+	/* вказуємо відступ на початку руху тексту */
+	padding-inline-start: 15px;
+
+	/* Відносно позиціонуємо елемент */
+	/* вказуємо зсув з лівої сторони елементу */
+	/* position: relative;
+	left: 15px; */
+	/* вказуємо зсув на початку руху тексту */
+	inset-inline-start: 15px;
+
+	/* Декоруємо елемент, описуючи зелену лінію справа */
+	/* border-left: 1px solid green; */
+	/* Декоруємо елемент описуючи зелену лінію на початку руху тексту */
+	border-inline-start: 1px solid green;
+}
+
+.basic-element {
+	/* width: 250px;
+	height: 60px;
+	padding-left: 15px; */
+	inline-size: 250px;
+	block-size: 60px;
+	/* Відносно позиціонуємо елемент */
+	/* вказуємо відступ зліва */
+	/* position: relative;
+	left: 15px; */
+
+	/* Декоруємо елемент, описуючи зелену лінію зліва */
+	border-left: 1px solid green;
+}
+
+.some-element {
+	inline-size: 100px;
+	max-inline-size: 100px;
+	min-inline-size: 100px;
+
+	block-size: 100px;
+	max-block-size: 100px;
+	min-block-size: 100px;
+
+
+	/* відступи: */
+
+	padding-inline-start: 10px;
+	padding-inline-end: 10px;
+
+	padding-inline: 10px;
+
+	padding-block-start: 10px;
+	padding-block-end: 10px;
+
+	padding-block: 10px;
+
+	padding-inline: 10px;
+	padding-block: 10px;
+
+	margin-inline-start: 10px;
+	margin-inline-end: 10px;
+
+	margin-inline: 10px;
+
+	margin-block-start: 10px;
+	margin-block-end: 10px;
+
+	margin-block: 10px;
+
+	margin-inline: auto;
+
+
+	/* Позіцінування (left, right, top, bottom) */
+
+	inset-inline-start: 10px;
+	inset-inline-end: 10px;
+	inset-block-start: 10px;
+	inset-block-end: 10px;
+
+	inset-inline: 10px;
+	inset-block: 10px;
+
+
+	/* borders: */
+
+	border-inline-start: 1px solid green;
+	border-inline-end: 1px solid green;
+	border-block-start: 1px solid green;
+	border-block-end: 1px solid green;
+
+
+	border-inline: 1px solid green;
+	border-block: 1px solid green;
+
+	/* align: */
+
+	/* text-align: left;
+	text-align: right; */
+
+	text-align: start;
+	text-align: end;
+
+	/* border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px; */
+
+	border-start-start-radius: 10px;
+	border-start-end-radius: 10px;
+	border-end-start-radius: 10px;
+	border-end-end-radius: 10px;
+
+	/* resize: vertical;
+	resize: horizontal; */
+
+	resize: block;
+	resize: inline;
+}

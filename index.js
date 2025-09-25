@@ -2,16 +2,10 @@ const inTextarea = document.getElementById('inTextarea');
 const outTextarea = document.getElementById('outTextarea');
 // document.getElementById('user-name').textContent = userInput;
 
-function escapeHTML(str) {
-	return str
-		.replace(/&/g, '&amp;')
-		.replace(/</g, '&lt;')
-		.replace(/>/g, '&gt;')
-		.replace(/"/g, '&quot;')
-		.replace(/'/g, '&#39;')
+function stripHtmlTags(htmlString) {
+	const regex = /<[^>]*>/g;
+	return htmlString.replace(regex, '');
 }
-// const safeInput = escapeHTML(textInput);
-
 
 inTextarea.placeholder = 'Type here...';
 const downloadBtn = document.getElementById('downloadBtn');
@@ -19,8 +13,7 @@ const downloadBtn = document.getElementById('downloadBtn');
 function getTextAreaContent() {
 	const text = inTextarea.value;
 	const retext = text.replace(/\d{0,1}\d:\d\d/g, " ");
-	const safeInput = escapeHTML(retext.replace(/\n/g, ""));
-	// outTextarea.value = retext.replace(/\n/g, "");
+	const safeInput = stripHtmlTags(retext.replace(/\n/g, ""));
 	outTextarea.value = safeInput;
 }
 
@@ -38,3 +31,4 @@ downloadBtn.addEventListener('click', () => {
 	document.body.removeChild(a);
 	URL.revokeObjectURL(url);
 });
+
